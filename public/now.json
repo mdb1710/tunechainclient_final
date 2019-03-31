@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "name": "tunechain-app",
+    "alias": "mdb1710-tunechain-app",
+    "routes": [
+        {
+            "src": "^/static/(.*)",
+            "dest": "/static/$1"
+        },
+        {
+            "src": ".*",
+            "dest": "/index.html"
+        }
+    ]
+    }

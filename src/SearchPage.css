@@ -1,0 +1,41 @@
+.searchform {
+    background-color: whitesmoke;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 5px green;
+    margin: 25px;
+
+}
+
+.form-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: .5em;
+}
+
+.form-section > label {
+  padding: .5em 1em .5em 0;
+  flex: 1;
+}
+
+#reset-button, #match-button {
+   padding: .5em; 
+   background: whitesmoke;
+   color: green;
+   border: 1 px green;
+}
+
+.form-section > input {
+    flex: 3;
+}
+
+@media screen and (min-width: 768px) {
+    .form-section > input {
+     flex: 3;  
+}
+}
+@media screen and (min-width: 992px) {
+    .form-section> input {
+     flex: 4; 
+    }
+}    

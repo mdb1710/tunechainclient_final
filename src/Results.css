@@ -1,0 +1,48 @@
+body {
+background-color: #191414;
+color: #1DB954;
+
+}
+
+ul {
+display: flex;
+flex-direction: column;
+}
+
+li {
+    border: 2px green;
+}
+
+h3 {
+ font-size: 30px;
+ color: #1DB954;
+
+}
+
+.result-name {
+  font-size: 30px;
+
+}
+
+.result-image {
+
+
+}
+
+.result-tracks {
+    font-size: 30px;
+
+
+}
+
+.result-url {
+  font-size: 30px;
+  color: whitesmoke;
+
+
+}
+
+.new-search {
+
+
+}
