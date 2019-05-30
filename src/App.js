@@ -27,6 +27,7 @@ class App extends Component {
   displaySearchResults = (m, g, a) => {
     console.log('Search ended');
     console.log(m, g);
+    console.log(BASE_API_URL);
     fetch(`${BASE_API_URL}/search?mood=${m}&genre=${g}`, {
       'content-type': 'application-json',
     })
