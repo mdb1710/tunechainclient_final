@@ -13,7 +13,9 @@ const SearchContext = React.createContext({
     updateArtist: () => {},
     updateMood: () => {},
     updateGenre: () => {},
-    displaySearchResults: () => {}
+    displaySearchResults: () => {},
+    captureSearchResults: () => {},
+    displaySavedSearches: () => {}
 });
 
 export default SearchContext;
