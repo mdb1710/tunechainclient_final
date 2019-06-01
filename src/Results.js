@@ -26,6 +26,8 @@ class Results extends Component {
         <>    
           
             <h3>Here are your {mood} & {genre} search results for {artist} </h3>
+            <button type='button'>Save Search</button>
+            <button type='button'>Go to Saved Searches</button>
             <div className="result-list">
                 <ul>
                    {playlists.map((note, index) =>{
