@@ -7,8 +7,10 @@ import Results from './Results';
 import Footer from './components/Footer';
 import SearchContext from './context/SearchContext';
 import { BASE_API_URL } from './config';
+import SavedSearches from './components/SavedSearches';
 
 import  './App.css';
+
 
 
 
@@ -38,6 +40,13 @@ class App extends Component {
       this.setState({ playlists: newList });
     
     });
+  }
+
+  captureSearchResults = (m,g) => {
+    
+    console.log('search saved');
+    console.log(m);
+    console.log(g);
   }
 
   updateArtist = (name) => {
@@ -75,6 +84,20 @@ class App extends Component {
     })
   }
 
+  displaySavedSearches = () => {
+    console.log('started');
+    fetch(`${BASE_API_URL}/saved`,{
+      method: 'GET',
+      'content-type': 'application-json',
+     
+
+    })
+    .then(res => res.json())
+    .then(search => {
+      console.log(search)
+    })
+  }
+
 
   render() {
     const contextValue = {
@@ -89,7 +112,9 @@ class App extends Component {
       updateArtist: this.updateArtist,
       updateMood: this.updateMood,
       updateGenre: this.updateGenre,
-      displaySearchResults: this.displaySearchResults
+      displaySearchResults: this.displaySearchResults,
+      captureSearchResults: this.captureSearchResults,
+      displaySavedSearches: this.displaySavedSearches
     }
     return (
       <div className="App">
@@ -106,6 +131,10 @@ class App extends Component {
         <Route 
         path='/results'
         component={Results}
+        />
+        <Route
+        path='/saved'
+        component={SavedSearches}
         />
        
         </SearchContext.Provider>
