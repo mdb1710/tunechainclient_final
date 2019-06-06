@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Results from './Results';
 import Footer from './components/Footer';
 import SearchContext from './context/SearchContext';
-import { BASE_API_URL } from './config';
+import config from './config';
 import SavedSearches from './components/SavedSearches';
 
 import  './App.css';
@@ -30,8 +30,8 @@ class App extends Component {
   displaySearchResults = (m, g) => {
     console.log('Search ended');
     console.log(m, g);
-    console.log(BASE_API_URL);
-    fetch(`${BASE_API_URL}/search?mood=${m}&genre=${g}`, {
+    console.log(config.BASE_API_URL);
+    fetch(`${config.BASE_API_URL}/search?mood=${m}&genre=${g}`, {
       'content-type': 'application-json',
     })
     .then(res => res.json())
@@ -53,7 +53,7 @@ class App extends Component {
       genre: g
     });
     console.log(params);
-    fetch(`${BASE_API_URL}/saved`, {
+    fetch(`${config.BASE_API_URL}/saved`, {
       
       headers:{
         'content-type': 'application/json'
@@ -109,7 +109,7 @@ class App extends Component {
 
   displaySavedSearches = () => {
     console.log('started');
-    fetch(`${BASE_API_URL}/saved`)
+    fetch(`${config.BASE_API_URL}/saved`)
     .then(res => res.json())
     .then(search => {
       let savedList = search;
