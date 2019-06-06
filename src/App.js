@@ -23,6 +23,7 @@ class App extends Component {
     username: "",
     password: "",
     playlists: [],
+    savedSearches: [],
     error: null
   }
 
@@ -47,6 +48,28 @@ class App extends Component {
     console.log('search saved');
     console.log(m);
     console.log(g);
+    let params = JSON.stringify({
+      mood: m,
+      genre: g
+    });
+    console.log(params);
+    fetch(`${BASE_API_URL}/saved`, {
+      
+      headers:{
+        'content-type': 'application/json'
+      },
+        
+      
+      method: "POST",
+      
+      body: params
+    })
+      .then(res => {
+        return res.json();
+      })
+      .then(result => console.log('Search added', result)); 
+      
+
   }
 
   updateArtist = (name) => {
@@ -86,15 +109,14 @@ class App extends Component {
 
   displaySavedSearches = () => {
     console.log('started');
-    fetch(`${BASE_API_URL}/saved`,{
-      method: 'GET',
-      'content-type': 'application-json',
-     
-
-    })
+    fetch(`${BASE_API_URL}/saved`)
     .then(res => res.json())
     .then(search => {
-      console.log(search)
+      let savedList = search;
+      console.log(savedList);
+      this.setState({
+        savedSearches: savedList
+      })
     })
   }
 
@@ -107,6 +129,7 @@ class App extends Component {
       playlists: this.state.playlists,
       username: this.state.username,
       password: this.state.password,
+      savedSearches: this.state.savedSearches,
       setUsername: this.setUsername,
       setPassword: this.setPassword,
       updateArtist: this.updateArtist,

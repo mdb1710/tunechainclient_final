@@ -26,7 +26,7 @@ class Results extends Component {
         <>    
           
             <h3>Here are your {mood} & {genre} search results for {artist} </h3>
-            <button type='button' onClick={this.context.captureSearchResults(mood, genre)}>Save Search</button>
+            <button type='submit' onClick={() => this.context.captureSearchResults(mood, genre)}>Save Search</button>
             <Link to='/saved'>
             <button type='button'>Go to Saved Searches</button>
             </Link>
