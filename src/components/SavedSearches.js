@@ -16,6 +16,10 @@ class SavedSearches extends Component {
         saved: []
     }
 
+    searchResultsAgain = () => {
+        console.log('search again');
+    }
+
     
 
     render () {
@@ -28,7 +32,7 @@ class SavedSearches extends Component {
                {savedSearches.map(list => {
                    return(
                        <li key={list.id}>Playlist {list.id}: {list.user_mood} {list.user_genre} <br />
-                       <button type='submit'>See Results Again</button>
+                       
                        </li>
                    )
                })}

@@ -27,7 +27,7 @@ class App extends Component {
     error: null
   }
 
-  displaySearchResults = (m, g, a) => {
+  displaySearchResults = (m, g) => {
     console.log('Search ended');
     console.log(m, g);
     console.log(BASE_API_URL);
