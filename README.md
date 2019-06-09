@@ -4,7 +4,7 @@ Michael Bonner, Primary Developer
 
 [LiveApp](https://tunechain-app.mdb1710.now.sh)
 
-[Client Repo](https://github.com/thinkful-ei-armadillo/spendful-server)
+[Client Repo](https://github.com/mdb1710/tunechainclient_final)
 
 ## Summary
 
