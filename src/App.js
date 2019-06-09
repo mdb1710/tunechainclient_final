@@ -28,16 +28,14 @@ class App extends Component {
   }
 
   displaySearchResults = (m, g) => {
-    console.log('Search ended');
-    console.log(m, g);
-    console.log(config.BASE_API_URL);
+    
     fetch(`${config.BASE_API_URL}/search?mood=${m}&genre=${g}`, {
       'content-type': 'application-json',
     })
     .then(res => res.json())
     .then(data => {
       let newList = data;
-      console.log(newList);
+      
       this.setState({ playlists: newList });
     
     });
@@ -45,14 +43,12 @@ class App extends Component {
 
   captureSearchResults = (m,g) => {
     
-    console.log('search saved');
-    console.log(m);
-    console.log(g);
+    
     let params = JSON.stringify({
       mood: m,
       genre: g
     });
-    console.log(params);
+    
     fetch(`${config.BASE_API_URL}/saved`, {
       
       headers:{
@@ -72,48 +68,31 @@ class App extends Component {
 
   }
 
-  updateArtist = (name) => {
-    console.log(name);
-    this.setState({
-      artist: name
-    })
-  }
+  
 
   updateMood = (name) => {
-    console.log(name);
+    
     this.setState({
       mood: name
     })
   }
 
   updateGenre = (name) => {
-    console.log(name);
+    
     this.setState({
       genre: name
     })
   }
 
-  setUsername = (name) => {
-    console.log(name);
-    this.setState({
-      username: name
-    })
-  }
-
-  setPassword = (name) => {
-    console.log(name);
-    this.setState({
-      password: name
-    })
-  }
+  
 
   displaySavedSearches = () => {
-    console.log('started');
+    
     fetch(`${config.BASE_API_URL}/saved`)
     .then(res => res.json())
     .then(search => {
       let savedList = search;
-      console.log(savedList);
+      
       this.setState({
         savedSearches: savedList
       })

@@ -8,23 +8,26 @@ class SavedSearches extends Component {
     static contextType = SearchContext;
 
     componentDidMount(){
-        console.log('here are your saved searches');
+        
         this.context.displaySavedSearches();
+        this.setState({
+            saved: this.context.savedSearches
+        })
     }
 
     state = {
         saved: []
     }
 
-    searchResultsAgain = () => {
-        console.log('search again');
-    }
+    // searchResultsAgain = () => {
+    //     console.log('search again');
+    // }
 
     
 
     render () {
 
-        const { mood, genre, savedSearches } = this.context;
+        const { savedSearches} = this.context;
         return (
             <div className='saved-searches'>
               <h3>Here are your saved searches</h3>

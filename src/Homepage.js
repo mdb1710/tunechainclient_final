@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import Login from './components/AppLogin';
+
 
 
 class Homepage extends Component {
@@ -20,6 +20,7 @@ class Homepage extends Component {
                    <p>Regardless what mood you are in there were always songs that match it.</p>
                
                 </div>
+
                 <div className="start">
                    <Link to='/search'>
                      <button type="submit" onClick={() => this.handleStartSearch()}>Start Here</button>

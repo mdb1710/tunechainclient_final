@@ -17,7 +17,7 @@ class Searchpage extends Component{
 
     handleFirstArtistChange = (e) => {
        
-        console.log(e.target.value);
+        
         this.context.updateArtist(e.target.value);
     };
    
@@ -25,14 +25,14 @@ class Searchpage extends Component{
     handleMoodChange = (e) =>{
        
         
-        console.log(e.target.value);
+        
         this.context.updateMood(e.target.value);
     };
 
     handleGenreChange = (e) =>{
        
         
-        console.log(e.target.value);
+        
         this.context.updateGenre(e.target.value);
     };
 
@@ -40,24 +40,16 @@ class Searchpage extends Component{
 
     handleArtistSearch = (e) => {
      e.preventDefault();   
-     const { artist, mood, genre } = this.state;
-     console.log('Search started');
-     console.log('artist', artist);
-     console.log('mood', mood);
-     console.log('genre', genre);
-    //  this.context.displaySearchResults(mood, genre);
+     
+     
      
     };
 
-    // resetArtistSearch(event){
-    //     event.preventDefault();
-    //     console.log('Search has reset');
-        
-    // }
+    
     
     render() {
-        const { artist, mood, genre } = this.context;
-        // console.log(artist, mood, genre);
+        
+       
 
         return(
         <>
