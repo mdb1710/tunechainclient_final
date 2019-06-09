@@ -11,8 +11,7 @@ class Results extends Component {
 
     componentDidMount(){
         const { mood, genre } = this.context
-        // let url = playlists.external_urls.spotify;
-        // console.log(url);
+        
         this.context.displaySearchResults(mood, genre);
     }
 
@@ -20,7 +19,7 @@ class Results extends Component {
     
     render(){
         const { artist, mood, genre, playlists } = this.context;
-        // let url = playlists.external_urls.spotify;
+        
       
         return(
         <>    
