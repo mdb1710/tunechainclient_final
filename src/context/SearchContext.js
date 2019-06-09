@@ -8,6 +8,7 @@ const SearchContext = React.createContext({
     playlist: [],
     username: "",
     password: "",
+    savedSearches: [],
     setUsername: () => {},
     setPassword: () => {},
     updateArtist: () => {},
