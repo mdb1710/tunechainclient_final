@@ -1,3 +1,9 @@
 .App-header {
     color:  #1DB954;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .App-header{
+        font-size: 10px;
+    }
+}

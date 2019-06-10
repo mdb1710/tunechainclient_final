@@ -22,3 +22,14 @@
   color: #61dafb;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .App {
+    width: 75%;
+    margin: auto;
+    font-size: 15px;
+  }
+
+  
+}
+
