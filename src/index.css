@@ -6,11 +6,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  background-image: url('./playlistbackground.jpg');
+  
+}
+
+html {
+  background-image: url('./playlistbackground.jpg');
+  
+  background-blend-mode: color;
+  
+  
+}
+
+main {
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  display: block;
+  background-image: url('./playlistbackground.jpg');
+  width: 1200px;
+  height: 800px;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 
 @media (min-width: 480px) and (max-width: 600px) {
@@ -24,11 +57,13 @@ code {
  main {
    margin: auto;
    width: 70%;
+   background-color: black;
  }
 
  .App{
    width: 80%;
    margin: auto;
+   background-color: black;
  }
 }
 
@@ -46,6 +81,7 @@ code {
 
   h3 {
     margin: auto;
+    
   }
 
   p {
