@@ -53,7 +53,7 @@ class Searchpage extends Component{
 
         return(
         <>
-            <h2>Fill Out At Least One of the Search Area</h2>
+            <h2>Fill Out At Least One of the Search Areas</h2>
             <div className="searchform">
                 <form id='artist-search-form' onSubmit={this.handleArtistSearch}>
                    <fieldset>

@@ -16,9 +16,15 @@ class Homepage extends Component {
                     <h2>Find the perfect songs for your current mood</h2>
                 </header>
                 <div className='intro'>
-                   <h3>About this app...</h3>
-                   <p>Regardless what mood you are in there were always songs that match it.</p>
-               
+                   <h3>What is 'Tunechain'</h3>
+                   <p>Tunechain is an app that help you search Spotify to find music 'chained' to your current mood. You can search for user-curated playlists from all of Spotify even you don't have a Spotify account</p>
+                   <h3>How To Use Tunechain</h3>
+                   <ul>
+                     <li>Click The Start Here Button Below</li>
+                     <li>Enter the 'mood' and 'genre in the Search form</li>
+                     <li>Click 'Show Matches'</li>
+                     <li>See The Playlists and start listening!</li>
+                   </ul>
                 </div>
 
                 <div className="start">
